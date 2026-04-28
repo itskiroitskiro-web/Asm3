@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.promo-bar {
+    background: #ef55b5;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 6px 0;
+}
+
+.promo-track {
+    display: inline-block;
+    animation: scrollText 20s linear infinite;
+}
+
+.promo-track span {
+    margin: 0 40px;
+    font-size: 11px;
+    color: white;
+}
+
+@keyframes scrollText {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
