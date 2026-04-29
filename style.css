@@ -128,6 +128,22 @@ body {
     white-space: nowrap;
 }
 
+.collection-scroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 0;
+    background: black;
+}
+
+.collection-scroll img {
+    width: 55%;
+    min-width: 55%;
+    anchor-scope: 3 / 4;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 60px;
+}
+
 .footer {
     background:#ef55b5;
     color: black;
