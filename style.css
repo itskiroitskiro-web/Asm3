@@ -127,3 +127,44 @@ body {
     font-size: 32px;
     white-space: nowrap;
 }
+
+.footer {
+    background:#ef55b5;
+    color: black;
+    padding: 36px 16px;
+}
+
+.footer input {
+    width: 86%;
+    padding: 14px;
+    border: 2px solid black;
+    background: transparent;
+    margin-bottom: 14px;
+}
+
+.footer button {
+    background: black;
+    color:#ef55b5;
+    border: none;
+    padding: 14px 24px;
+    font-weight: bold;
+}
+
+.footer h3 {
+    margin-top: 50px;
+}
+
+.footer a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    margin: 22px 0;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 10px;
+    font-size: 11px;
+}
+
