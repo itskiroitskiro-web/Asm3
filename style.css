@@ -138,7 +138,7 @@ body {
 .collection-scroll img {
     width: 55%;
     min-width: 55%;
-    anchor-scope: 3 / 4;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
     display: block;
     margin-bottom: 60px;
