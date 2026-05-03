@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="checkout-body">
+    
+    <header class="checkout-header">
+        <a href="product.html" class="checkout-back">
+            <img src="images/back.svg" alt="Back Button">
+        </a>
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.avif" alt="CherryKitten Logo">
+        </a>
+    </header>
+
+    <main class="checkout-page">
+
+        <section class="order-summary-top">
+            <div class="summary-title">
+                <span>ORDER SUMMARY</span>
+                <span>$93.60</span>
+            </div>
+        </section>
+
+        <section class="order-summary pink">
+
+            <div class="summary-product">
+                <img src="images/yellowbabytee.jpeg" alt="Yellow baby tee">
+                <span class="item-count">1</span>
+
+                <div class="summary-product-info">
+                    <h3>Who's A Good Boy BABY TEE - Yellow</h3>
+                    <p>XS</p>
+                </div>
+
+                <p class="summary-price">$32.80</p>
+            </div>
+
+            <div class="summary-product">
+                <img src="images/bluebabytee.jpeg" alt="Blue Baby Tee">
+                <span class="item-count">1</span>
+
+                <div class="summary-product-info">
+                    <h3>Rhine Stone Hot Girls Love Techno BABY TEE - Blue</h3>
+                    <p>XS</p>
+                </div>
+
+                <p class="summary-price">$60.80</p>  
+            </div>
+
+            <div class="discount-row">
+                <input type="text" placeholder="DISCOUNT CODE OR GIFT CARD">
+                <button>APPLY</button>
+            </div>
+
+            <div class="price-row">
+                <span>Subtotal - 2 Items</span>
+                <span>$93.60</span>
+            </div>
+
+            <div class="price-row">
+                <span>Shipping ⓘ</span>
+                <span></span>
+            </div>
+
+            <div class="total-row">
+                <strong>Total</strong>
+                <strong>AUD $93.60</strong>
+            </div>
+
+        </section>
+
+        <section class="paypal-section">
+            <button class="paypal-btn">Pay with PayPal</button>
+
+            <div class="or-line">
+                <span></span>
+                <p>OR</p>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="checkout-form-section">
+            <div class="section-heading">
+                <h2>Contacts</h2>
+                <a href="#">SIGN IN</a>
+            </div>
+
+            <input type="email" placeholder="Email OR Phone Mobile Number">
+
+            <label class="checkbox-row">
+                <input type="checkbox">
+                <span>Email me the news and offers</span>
+            </label>
+
+            <h2>Delivery</h2>
+
+            <input type="text" value="Australia" placeholder="Country/Region">
+            <input type="text" placeholder="First Name (Optional)">
+            <input type="text" placeholder="Last Name">
+            <input type="text" placeholder="Address">
+            <input type="text" placeholder="Apartment, suite, etc. (Optional)">
+            <input type="text" placeholder="Suburb">
+            <input type="text" value="Victoria" placeholder="State/Territory">
+            <input type="text" placeholder="Postcode">
+            <input type="text" placeholder="Phone Number">
+
+            <label class="save-row">
+                <input type="checkbox">
+                <span>Save this information for next time</span>
+            </label>
+        </section>
+
+        <section class="shipping-methods">
+            <h2>Shipping Methods</h2>
+            <div class="disabled-box">
+                Enter your shipping address to view available shipping methods.
+            </div>
+        </section>
+
+        <section class="payment-section">
+            <h2>Payments</h2>
+
+            <div class="payment-card">
+
+                <div class="payment-title">
+                    <span>● Credit card</span>
+                    <span>Mastercard VISA +3</span>
+                </div>
+
+                <input type="text" placeholder="Card Number">
+                <input type="text" placeholder="Name on Card">
+                <input type="text" placeholder="Expiry Date (MM/YY)">
+                <input type="text" placeholder="Security Code (CVV)">
+                
+                <label class="billing-row">
+                    <input type="checkbox" checked>
+                    <span>Use shipping address as billing address</span>
+                </label>
+
+                <div class="payment-option">○ PayPal <span>PayPal</span></div>
+                <div class="payment-option">○ ApplePay <span>Pay</span></div>
+            </div>
+        </section>
+
+        <section class="checkouyt-total-card">
+            <img src="images/yellowbabytee.jpeg" alt="Yellow Baby Tee">
+
+            <div>
+                <h3>Total</h3>
+                <p>2 items</p>
+            </div>
+
+            <div class="checkout-total-price">
+                <span>AUD</span>
+                <strong>$93.60</strong>
+            </div>
+        </section>
+
+        <button class="pay-now-btn" id="payNowBtn">PAY NOW</button>
+
+        <footer class="checkout-footer">
+            <a href="#">Refund Policy</a>
+            <a href="#">Shipping</a> 
+            <a href="#">Privacy Policy</a>
+            <a href="#">Contact Us</a>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
