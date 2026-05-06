@@ -9,3 +9,11 @@ openCart.addEventListener("click", function () {
 closeCart.addEventListener("click", function () {
     cartOverlay.classList.remove("active");
 });
+
+const payNowBtn = document.getElementById("payNowBtn");
+
+if (payNowBtn) {
+    payNowBtn.addEventListener("click", function () {
+        window.location.href = "success.html";
+    });
+}

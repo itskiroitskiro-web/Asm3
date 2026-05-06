@@ -373,7 +373,7 @@ body {
 
 .checkout-btn {
     display: block;
-    background:#e99bea;
+    background:#ef55b5;
     color: black !important;
     text-align: center;
     text-decoration: none;
@@ -503,7 +503,7 @@ body {
 .total-row {
     display: flex;
     justify-content: space-between;
-    font-size: 12p;
+    font-size: 12px;
     margin-top: 18px;
 }
 
@@ -535,13 +535,13 @@ body {
 }
 
 .or-line span {
-    hight: 2px;
+    height: 2px;
     background: #aaa;
     flex: 1;
 }
 
 .or-line p {
-    fongt-size: 10px;
+    font-size: 10px;
     margin: 0;
 }
 
@@ -629,4 +629,73 @@ body {
     gap: 12px;
     align-items: center;
     padding: 10px 16px;
+}
+
+.checkout-total-card img {
+    width: 50px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.checkout-total-card h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.checkout-total-card p {
+    margin: 8px 0 0;
+    font-size: 12px;
+}
+
+.checkout-total-price {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.checkout-total-price span {
+    background: white;
+    color: black;
+    border-radius: 4px;
+    padding: 2px 5px;
+    font-size: 9px;
+}
+
+.checkout-total-price strong {
+    font-size: 16px;
+}
+
+.pay-now-btn {
+    width: calc(100% - 32px);
+    margin: 18px 16px;
+    background: #ef55b5;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 16px;
+}
+
+.checkout-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #aaa;
+    padding: 16px;
+}
+
+.checkout-footer a {
+    color: white;
+    font-size: 10px;
+}
+
+.checkout-page {
+    overflow-x: hidden;
+}
+
+.order-summary-pink,
+.checkout-form-section,
+.shipping-methods,
+.payment-section,
+.checkout-total-card {
+    box-sizing: border-box;
 }
