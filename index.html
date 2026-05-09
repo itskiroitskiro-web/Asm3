@@ -34,7 +34,7 @@
         </a>
 
         <div class="header-icons">
-            <button class ="icon-btn">
+            <button class ="icon-btn search-btn">
                 <img src="images/search.svg">
             </button>
 
@@ -91,6 +91,35 @@
         </section>
 
     </main>
+
+    <div class="search-overlay" id="searchOverlay">
+    
+    <div class="search-container">
+
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search">
+            <button class="search-submit-btn" type="button">
+    <img src="images/search.svg" alt="Search">
+</button>
+        </div>
+
+        <!-- Suggestions -->
+        <div class="search-section">
+            <p class="section-title">Suggestions</p>
+            <div class="suggestions" id="suggestions"></div>
+        </div>
+
+        <!-- Products -->
+        <div class="search-section">
+            <p class="section-title">Products</p>
+            <div id="searchResults"></div>
+        </div>
+
+        <button class="view-all-btn">View All Results</button>
+
+    </div>
+
+</div>
 
     <footer class="footer">
         <p>Join CherryKitten</p>
