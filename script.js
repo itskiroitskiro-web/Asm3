@@ -1,10 +1,12 @@
-const openCart = document.getElementById("openCart");
+const openCartButtons = document.querySelectorAll(".open-cart-btn");
 const closeCart = document.getElementById("closeCart");
 const cartOverlay = document.getElementById("cartOverlay");
 
-if (openCart && closeCart && cartOverlay) {
-    openCart.addEventListener("click", function () {
-        cartOverlay.classList.add("active");
+if (closeCart && cartOverlay) {
+    openCartButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            cartOverlay.classList.add("active");
+        });
     });
 
     closeCart.addEventListener("click", function () {
