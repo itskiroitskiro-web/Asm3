@@ -7,7 +7,7 @@ if (closeCart && cartOverlay) {
         button.addEventListener("click", function () {
             cartOverlay.classList.add("active");
         });
-    });
+    }); // check if cart elements exist before adding interactions
 
     closeCart.addEventListener("click", function () {
         cartOverlay.classList.remove("active");
@@ -20,7 +20,7 @@ if (payNowBtn) {
     payNowBtn.addEventListener("click", function () {
         window.location.href = "success.html";
     });
-}
+} // redirect user to success page after payment
 
 // search function
 const searchBtn = document.querySelector('.search-btn');
@@ -30,7 +30,7 @@ const searchResults = document.getElementById('searchResults');
 const suggestionsBox = document.getElementById("suggestions");
 
 
-// mimic my products data
+// simulated product data for search functionality
 const products = [
     {
         name: "Who's A Good Boy BABY TEE",
@@ -68,32 +68,33 @@ const suggestionsList = [
 //highlight the words
 function highlightMatch(text, keyword) {
     if (!keyword) return text;
-
+ // regular expression, 1. highlight matching keyword inside text using regular expression, if keyword is empty, return original text, create regular expression to find matching words and replace matched keyword with bold text.
     const regex = new RegExp(`(${keyword})`, "gi");
     return text.replace(regex, `<b>$1</b>`);
 }
 
+// render matching search suggestions
 function renderSuggestions(keyword) {
-    suggestionsBox.innerHTML = "";
+    suggestionsBox.innerHTML = ""; // clear previous suggestions
 
-    if (keyword === "") return;
+    if (keyword === "") return; // stop function if input is empty
 
     const filtered = suggestionsList.filter(item =>
         item.toLowerCase().includes(keyword)
-    );
+    ); // filter suggestions that include the keyword, and lowercase is to make search case-insensitive
 
     filtered.forEach(text => {
-        const span = document.createElement("span");
+        const span = document.createElement("span"); // create new span element for each suggestion
         span.innerHTML = highlightMatch(text, keyword);
 
         span.addEventListener("click", () => {
-            searchInput.value = text;
-            searchInput.dispatchEvent(new Event("input"));
+            searchInput.value = text; // update input value when suggestion is clicked
+            searchInput.dispatchEvent(new Event("input")); // important, manually trigger input event to refresh results
         });
 
         suggestionsBox.appendChild(span);
     });
-}
+}  // loop through filtered suggestions
 
 function renderProducts(keyword) {
     searchResults.innerHTML = "";
@@ -104,8 +105,9 @@ function renderProducts(keyword) {
         product.name.toLowerCase().includes(keyword)
     );
 
+    // dynamically insert search result into page, it injects HTML content into the DOM dynamically
     filteredProducts.forEach(product => {
-        searchResults.innerHTML += `
+        searchResults.innerHTML += ` 
             <a href="${product.link}" class="search-item">
                 <img src="${product.img}" alt="${product.name}">
                 <div>
@@ -117,10 +119,11 @@ function renderProducts(keyword) {
     });
 }
 
+// only run search feature if all required elements exist!
 if (searchBtn && searchOverlay && searchInput && searchResults && suggestionsBox) {
     searchBtn.addEventListener("click", () => {
         searchOverlay.classList.add("active");
-        searchInput.focus();
+        searchInput.focus(); // automatically focus on input field
     });
 
     searchOverlay.addEventListener("click", (event) => {
@@ -130,12 +133,50 @@ if (searchBtn && searchOverlay && searchInput && searchResults && suggestionsBox
             searchResults.innerHTML = "";
             suggestionsBox.innerHTML = "";
         }
-    });
+    }); // target -- check if user clicked background overlay itself, users might click child element.
 
     searchInput.addEventListener("input", () => {
         const keyword = searchInput.value.toLowerCase().trim();
 
         renderSuggestions(keyword);
         renderProducts(keyword);
+    });
+}
+
+const openMenu = document.getElementById("openMenu");
+const closeMenu = document.getElementById("closeMenu");
+const menuOverlay = document.getElementById("menuOverlay");
+
+if (openMenu && closeMenu && menuOverlay) {
+    openMenu.addEventListener("click", function () {
+        menuOverlay.classList.add("active");
+    });
+
+    closeMenu.addEventListener("click", function () {
+        menuOverlay.classList.remove("active");
+    });
+
+    menuOverlay.addEventListener("click", function (event) {
+        if (event.target === menuOverlay) {
+            menuOverlay.classList.remove("active");
+        }
+    });
+}
+
+//open sub menuOverlay
+
+const openSubmenu = document.getElementById("openSubmenu");
+const closeSubmenu = document.getElementById("closeSubmenu");
+const submenu = document.getElementById("submenu");
+
+if (openSubmenu && closeSubmenu && submenu) {
+
+    openSubmenu.addEventListener("click", function (event) {
+        event.preventDefault(); // prevent link from refreshing page, because button is inside an anchor tag, has to stop the browser from following the link.
+        submenu.classList.add("active");
+    });
+
+    closeSubmenu.addEventListener("click", function () {
+        submenu.classList.remove("active");
     });
 }
