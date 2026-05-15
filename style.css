@@ -167,6 +167,11 @@ body {
     margin-bottom: 14px;
 }
 
+.footer input::placeholder {
+    color: #111;
+    opacity: 0.45;
+}
+
 .footer button {
     background: black;
     color:#ef55b5;
@@ -962,3 +967,90 @@ body {
     padding: 0;
     margin: 0;
 }
+
+.desktop-nav {
+    display: none;
+}
+
+.products-heading {
+    padding: 48px 24px 12px;
+    background: black;
+}
+
+.products-heading h2 {
+    color: #ef55b5;
+
+    font-size: 32px;
+    font-style: italic;
+    letter-spacing: 1px;
+
+    margin: 0;
+}
+
+/*desktop adaption*/
+@media (min-width: 1024px) {
+.products {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 48px 40px;
+    gap: 80px 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 32px;
+    height: 60px;
+}
+
+.logo img {
+    width: 90px;
+}
+
+#openMenu {
+    display: none;
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 80px;
+}
+
+.desktop-nav a {
+    color: #ef55b5;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hero {
+    height: 720px;
+    overflow: hidden;
+    position: relative;
+}
+
+/*change desktop herobanner, because the previous image is mobile radio, doesn't adapt to desktop*/
+.hero-img {
+    content: url("images/herobanner-desktop.jpg");
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.shop-link {
+    font-size: 20px;
+    padding: 18px 42px;
+}
+
+.products-heading {
+    padding: 36px 40px 12px;
+}
+
+.products-heading h2 {
+    color: white;
+    font-size: 18px;
+    letter-spacing: 4px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+}
+
